@@ -36,7 +36,7 @@ export const fetchImages = (per_page, page = 1) => async (dispatch) => {
     try {
         dispatch(fetchStart());
         const data = await fetch(
-            `https://api.unsplash.com/photos/?per_page=${per_page}&page=${page}&order_by=popular&client_id=`,
+            `https://api.unsplash.com/photos/?per_page=${per_page}&page=${page}&order_by=popular&client_id=896d4f52c589547b2134bd75ed48742db637fa51810b49b607e37e46ab2c0043`,
         );
         const json = await data.json();
         json.forEach((item) => dispatch(addImage(item)));
